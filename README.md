@@ -12,14 +12,14 @@ Check out [API LIVE DEMO]() here!!
 ## How to Install
 1. Git Clone
 ```
-git clone https://
+git clone https://github.com/ViKey07/fms_web.git
 ```
 2. Backend setting
 ```
 cd backend
 Python -m venv env
 (For Mac) source env/bin/activate
-(For Windows) env/Scripts\activate
+(For Windows) env\Scripts\activate
 pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
