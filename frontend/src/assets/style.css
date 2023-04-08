@@ -256,91 +256,7 @@ transform: scale(1.2);
 /***************************
 ****Carousel
 ****************************/
-/* .carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
 
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: white;
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  padding: 0;
-}
-
-.carousel button:first-of-type {
-  left: 20px;
-}
-
-.carousel button:last-of-type {
-  right: 20px;
-}
-
-.carousel button:before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-style: solid;
-  border-width: 2px 2px 0 0;
-  transform: rotate(-135deg);
-  vertical-align: middle;
-  margin-right: 10px;
-  border-color: brown;
-}
-
-.carousel button:last-of-type:before {
-  transform: rotate(45deg);
-  margin-right: 0;
-  margin-left: 10px;
-  border-color: brown;
-}
-
-.carousel button.arrow-next:before {
-  transform: rotate(45deg);
-}
-
-.carousel button.arrow-prev:before {
-  transform: rotate(-135deg);
-} */
-
-/* .carousel img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  transition: opacity 0.5s ease-in-out;
-} */
-
-/* .carousel img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
-}
-
-.carousel img:not(:first-of-type) {
-  opacity: 0;
-}
-
-.carousel img.active {
-  opacity: 1;
-} */
-
-/* .carousel img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  transition: opacity 0.5s ease-in-out;
-} */
 
 /* Default styles for the form */
 .details {
@@ -352,6 +268,13 @@ transform: scale(1.2);
 
 .product-details {
   flex: 1;
+}
+
+.box {
+  margin: 5em;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .box2 {
@@ -690,6 +613,10 @@ div.item-price {
   margin-top: 2%;
 }
 
+.item-details {
+  display: none;
+}
+
 .item-container .item-grid .item-bottom .added-cart {
   background-color: maroon;
   color: #fff;
@@ -742,11 +669,12 @@ div.item-price {
     font-size: medium;
   }
 
-  .i-price,
+  /* .i-price,
   p,
   button {
     font-size: 0.8em;
-  }
+    text-align: center;
+  } */
 
   .item-container .item-grid .item-bottom button,
   .item-container .item-grid .item-bottom .added-cart {
@@ -791,7 +719,25 @@ div.item-price {
   p,
   button {
     font-size: 0.9em;
+    text-align: center;
   }
+}
+
+.backhome {
+  text-align: center;
+  margin: 1em 0 0 0;
+}
+
+.message {
+  text-align: center;
+}
+
+.back-btn {
+  padding: 0.5em 2em;
+  border: none;
+  background-color: maroon;
+  color: white;
+  cursor: pointer;
 }
 
 
@@ -1016,6 +962,22 @@ button.number {
   letter-spacing: 0.5em;
 }
 
+select {
+  border-radius: 0;
+  padding: 0.3em 1em;
+  border: none;
+  background-color: maroon;
+  color: white;
+  font-weight: bold;
+}
+
+option {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+}
+
 /******************************
 *******Media Screen
 *******************************/
@@ -1037,6 +999,22 @@ button.number {
   .cart-heading {
     font-size: large;
   }
+  select {
+    border-radius: 0;
+    padding: 0.3em 1em;
+    margin: 0.2em;
+    border: none;
+    background-color: maroon;
+    color: white;
+    font-weight: bold;
+  }
+  
+  option {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1050,8 +1028,8 @@ button.number {
   }
 
   .circle {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    text-align: center;
   }
 
   .circle img {
@@ -1063,6 +1041,15 @@ button.number {
     margin: 5em 0 0 4em;
     font-size: large;
   }
+
+  .ca-li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 10px 0px;
+}
 }
 
 /******************************

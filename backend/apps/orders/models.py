@@ -4,6 +4,7 @@ from apps.users.models import User
 from config.constants import *
 
 
+
 class Order(models.Model):
     class Meta(object):
         db_table = 'order'

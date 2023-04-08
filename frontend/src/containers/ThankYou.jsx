@@ -27,7 +27,7 @@ const ThankYou = () => {
 
             <div class="backhome">
                 <a href="">
-                    <button onClick={() => dispatch(push('/'))}>Back to Home</button>
+                    <button className='back-btn' onClick={() => dispatch(push('/'))}>Back to Home</button>
                 </a>
             </div>
         </div>

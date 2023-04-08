@@ -85,8 +85,8 @@ export default class API {
     // Items
     // ///////////////////////////////////////
 
-    getItems = async () => {
-        let url = '/items/';
+    getItems = async (size, color) => {
+        let url = `/items/?size=${size}&color=${color}`;
         const items = await api
             .get(url)
             .then(response => {

@@ -13,8 +13,8 @@ from .forms import CartForm
 class CartList(CustomLoginRequiredMixin, generics.ListAPIView):
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
-    # filter_backends = [DjangoFilterBackend]
-    # filterset_fields = ['user_id']
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['user_id']
 
     def get(self, request, *args, **kwargs):
         self.queryset = Cart.objects.order_by('-created_at').filter(user=request.login_user)
