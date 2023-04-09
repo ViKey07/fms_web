@@ -960,6 +960,7 @@ button.number {
   font-weight: 700;
   border: none;
   letter-spacing: 0.5em;
+  cursor: pointer;
 }
 
 select {
@@ -969,6 +970,7 @@ select {
   background-color: maroon;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
 
 option {

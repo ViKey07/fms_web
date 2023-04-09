@@ -143,6 +143,23 @@ export default class API {
         return savedCart;
     };
 
+
+    // updateCart = async (cartId, size, color) => {
+    //     const savedCart = await api
+    //       .put(`/carts/${cartId}/update/`, {
+    //         size: size,
+    //         color: color
+    //       })
+    //       .then(response => {
+    //         return response.data;
+    //       })
+    //       .catch(error => {
+    //         throw new Error(error);
+    //       });
+    //     return savedCart;
+    //   };
+      
+
     deleteCarts = async cart_id => {
         const response = await api
             .delete('/carts/delete/' + cart_id + '/')

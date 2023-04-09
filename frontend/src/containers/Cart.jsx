@@ -70,6 +70,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from '../reducks/users/selectors';
 import { getItems } from '../reducks/items/selectors';
 import PageFooter from '../components/Common/Footer';
+// import API from '../API';
+
 
 // const Cart = ({ showFooter, subtotal }) => {
 //     const selector = useSelector(state => state);
@@ -145,6 +147,7 @@ const Cart = ({ showFooter, subtotal }) => {
         const bId = String(b.id);
         return aId.localeCompare(bId);
       });
+      
   
     return (
       <>
