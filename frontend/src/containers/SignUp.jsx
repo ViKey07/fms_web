@@ -44,7 +44,7 @@ const SignUp = () => {
                         <div class="input">
                             <div className="heading-sign-in">
                                 <h2>Create an account and discover the benefits</h2>
-                                <p> Sign Up to Refresh Cool Drinks</p>
+                                {/* <p> Sign Up to Refresh Cool Drinks</p> */}
                             </div>
                             <div className="input-feilds">
                                 <input

@@ -129,10 +129,12 @@ export default class API {
         return savedCart;
     };
 
-    updateCarts = async (cart_id, quantity) => {
+    updateCarts = async (cart_id, quantity, size, color) => {
         const savedCart = await api
             .put('/carts/update/' + cart_id + '/', {
-                quantity: quantity
+                quantity: quantity,
+                size: size,
+                color: color
             })
             .then(response => {
                 return response.data;
