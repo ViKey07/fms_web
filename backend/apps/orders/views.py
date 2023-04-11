@@ -38,7 +38,7 @@ class OrderAdd(CustomLoginRequiredMixin, generics.CreateAPIView):
 
         # Save to order items
         for cart in carts:
-            order_item_form = OrderItemForm({"order": order.id, "item":cart.item.id, "quantity":cart.quantity})
+            order_item_form = OrderItemForm({"order": order.id, "item":cart.item.id, "size":cart.size, "color":cart.color, "quantity":cart.quantity})
             order_item_form.save()
         
         # Delete cart items

@@ -58,6 +58,13 @@ class OrderItem(models.Model):
     item = models.ForeignKey(
         Item, on_delete=models.CASCADE, db_index=True
     )
+    size = models.CharField(
+        'Size', blank=False, null=True, max_length=1
+    )
+
+    color = models.CharField(
+        'Color', blank=False, null=True, max_length=10
+    )
     quantity = models. IntegerField(
         'Quantity', blank=False, null=False, db_index=True
     )

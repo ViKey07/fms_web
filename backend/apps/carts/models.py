@@ -24,6 +24,33 @@ from apps.items.models import Item
 
 
 
+# class Cart(models.Model):
+#     class Meta:
+#         db_table = 'cart'
+
+#     user = models.ForeignKey(
+#         User, on_delete=models.CASCADE, db_index=True
+#     )
+#     item = models.ForeignKey(
+#         Item, on_delete=models.CASCADE, db_index=True
+#     )
+#     quantity = models.IntegerField(
+#         'Quantity', blank=False, null=False, db_index=True
+#     )
+#     size = models.CharField(
+#         'Size', blank=True, null=True, max_length=1, choices=Item.SIZE_CHOICES
+#     )
+#     color = models.CharField(
+#         'Color', blank=True, null=True, max_length=10, choices=Item.COLOR_CHOICES
+#     )
+#     created_at = models.DateTimeField(
+#         'Created At', blank=True, auto_now_add=True
+#     )
+#     updated_at = models.DateTimeField(
+#         'Updated At', blank=True, auto_now=True
+#     )
+
+
 class Cart(models.Model):
     class Meta:
         db_table = 'cart'
@@ -38,10 +65,10 @@ class Cart(models.Model):
         'Quantity', blank=False, null=False, db_index=True
     )
     size = models.CharField(
-        'Size', blank=True, null=True, max_length=1, choices=Item.SIZE_CHOICES
+        'Size', blank=False, null=False, max_length=1, default="S", choices=Item.SIZE_CHOICES
     )
     color = models.CharField(
-        'Color', blank=True, null=True, max_length=10, choices=Item.COLOR_CHOICES
+        'Color', blank=False, null=False, max_length=10, default="Red", choices=Item.COLOR_CHOICES
     )
     created_at = models.DateTimeField(
         'Created At', blank=True, auto_now_add=True
