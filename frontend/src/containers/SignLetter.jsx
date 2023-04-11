@@ -2,10 +2,35 @@ import React from 'react';
 import './NewsletterSignUp.css';
 
 function NewsletterSignUp() {
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   const email = event.target.email.value;
+  //   // TODO: Submit email to server
+  // }
+
   function handleSubmit(event) {
     event.preventDefault();
     const email = event.target.email.value;
-    // TODO: Submit email to server
+  
+    // Send email data to server
+    fetch('/api/submit-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email })
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Email submitted successfully!');
+      } else {
+        throw new Error('Error submitting email');
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      alert('An error occurred while submitting the email');
+    });
   }
 
   return (

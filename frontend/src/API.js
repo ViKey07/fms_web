@@ -178,9 +178,28 @@ export default class API {
     // Order/Checkout
     // ////////////////////////////////////////
 
+    // orderAdd = async (params = {}) => {
+    //     const order = await api
+    //         .post('/orders/add/', params)
+    //         .then(response => {
+    //             return response.data;
+    //         })
+    //         .catch(error => {
+    //             throw new Error(error);
+    //         });
+    //     return order;
+    // };
+
     orderAdd = async (params = {}) => {
+        const { item, quantity, size, color } = params; // assuming you have access to size and color information
+    
         const order = await api
-            .post('/orders/add/', params)
+            .post('/orders/add/', {
+                item: item.id,
+                quantity: quantity,
+                size: size, // adding size property
+                color: color // adding color property
+            })
             .then(response => {
                 return response.data;
             })
@@ -189,6 +208,7 @@ export default class API {
             });
         return order;
     };
+    
 
     ///////////////////////////////////////////
     // Reference Post
@@ -234,3 +254,7 @@ export default class API {
         return response;
     };
 }
+
+
+  
+  
