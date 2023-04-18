@@ -38,7 +38,7 @@ function NewsletterSignUp() {
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <label htmlFor="email">Sign up for send Newsletter</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          <input className='newsletter-mail' type="email" id="email" name="email" placeholder="Enter your email" required />
           <button type="submit" className="submit-button">
             Sign Up
           </button>

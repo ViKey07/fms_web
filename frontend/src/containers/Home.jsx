@@ -13,6 +13,9 @@ import CImg2 from '../assets/img/clg_img2.png';
 import CImg3 from '../assets/img/clg_img3.png';
 import NewsLetter from './SignLetter.jsx';
 import ServiceBar from './ServiceBar';
+import ItemsPage from './ItemsPage';
+import ProductsSec from './ProductsSec';
+import FMSLOGO from '../assets/img/FMSLOGO.png'
 // import Footer from './components/Common/Footer.jsx';
 // import PageFooter from '../components/Common/Footer';
 
@@ -32,23 +35,47 @@ const Home = ({ showFooter, subtotal }) => {
     }, []);
 
     function handleShopNowClick() {
-        itemRef.current.scrollIntoView({ behavior: 'smooth' });
+        // itemRef.current.scrollIntoView({ behavior: 'smooth' });
+        window.location.href = '/items';
     }
 
     return (
         <>
             <section class="main-image">
-                <img src={MainImage} alt="main-img" />
-                <div className="shop-btn">
-                    <button className='shop-now' onClick={handleShopNowClick}>Shop Now</button>
+                <div className="home-images">
+                    <div className="home-logo-sec">
+                        <img className='home-fms-logo' src={FMSLOGO} alt="" />
+                    </div>
+
+                    <div className="offer">
+                        <img className='home-offer-img' src={MainImage} alt="main-img" />
+                        <div className="shop-btn">
+                            <button className='shop-now' onClick={handleShopNowClick}>Shop Now</button>
+                        </div>
+                    </div>
                 </div>
+                
             </section>
 
             <Carousel />
 
+            
+
+            <div className="product-heading">
+                <h2 className='product-list'>Categories</h2>
+            </div>
+
             <CustomCategoryButtons handleShopNowClick={handleShopNowClick} />
 
             <div className="product-heading">
+                <h2 className='product-list'>Best Selling</h2>
+            </div>
+
+            <ProductsSec />
+
+            {/* <ItemsPage /> */}
+
+            {/* <div className="product-heading">
                 <h2 className='product-list'>Product-List</h2>
             </div>
             <section className="item-container" ref={itemRef}>
@@ -60,15 +87,36 @@ const Home = ({ showFooter, subtotal }) => {
                             </div>
                         ))}
                 </div>
-            </section>
+            </section> */}
 
 
             <SupportFms handleShopNowClick={handleShopNowClick} />
 
+            <div className="product-heading">
+                <h2 className='product-list'>Products</h2>
+            </div>
+
+            <div className="cat-links">
+                {/* <ul className="navbar-links"> */}
+                    <li><a className='nav-l-2' href="/items">All</a></li>
+                    <li><a className='nav-l-2' href="/items">Apparel</a></li>
+                    <li><a className='nav-l-2' href="/items">Stationary</a></li>
+                    <li><a className='nav-l-2' href="/items">Mugs</a></li>
+                    <li><a className='nav-l-2' href="/items">Bottles</a></li>
+                    <li><a className='nav-l-2' href="/items">Rings</a></li>
+                    <li><a className='nav-l-2-b' href="/items">Bands</a></li>
+                {/* </ul> */}
+            </div>
+
+            <ProductsSec />
+
             <ServiceBar />
 
             <section className="new-latest">
-                <p className="n-l">New Latest</p>
+            <div className="product-heading">
+                <h2 className='product-list'>New Latest</h2>
+            </div>
+                {/* <p className="n-l">New Latest</p> */}
                 <div className="new-latest-img">
                     <img src={CImg1} alt="" className="c-img" />
                     <img src={CImg2} alt="" className="c-img" />

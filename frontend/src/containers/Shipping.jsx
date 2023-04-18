@@ -5,7 +5,7 @@ import { getCarts, getSubtotal } from '../reducks/carts/selectors';
 import { fetchCarts } from '../reducks/carts/operations';
 import { addOrder } from '../reducks/order/operations';
 import { push } from 'connected-react-router';
-import logo from '../assets/img/cooltees-logo.png';
+// import logo from '../assets/img/cooltees-logo.png';4
 const api = new API();
 
 const Shipping = () => {

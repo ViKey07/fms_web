@@ -14,11 +14,12 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 
 .floating-cart-button:hover {
+  transition: all 0.3s ease;
   transform: scale(1.2); 
 }
 
@@ -26,7 +27,11 @@
 .cart-icon {
   font-size: 30px;
   line-height: 60px;
-  width: 50%;
+  height: 35px;
+}
+
+.cart-item-container {
+  display: flex;
 }
 
 .cart-count {
@@ -37,3 +42,4 @@
   font-weight: bold;
   line-height: 60px;
 }
+

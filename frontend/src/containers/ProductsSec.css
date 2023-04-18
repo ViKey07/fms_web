@@ -1,0 +1,169 @@
+.h-img {
+    width: 70%;
+    height: 200px;
+    
+}
+
+.m-img {
+    width: 95%;
+    height: 200px;
+
+}
+
+.d-img {
+    width: 95%;
+    height: 200px;
+
+}
+
+.t-img {
+    width: 100%;
+    height: 200px;
+
+}
+
+.img-bg {
+    /* background-color: #e0e0e0; */
+    background-color: rgb(213 194 194 / 70%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-cat-btn {
+    border: none;
+    background: none;
+    width: 85%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    transform: scale(1);
+}
+
+.item-cat-btn:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1); 
+}
+
+.item-btn-link {
+    transition: transform 0.5s ease;;
+    text-decoration: none;
+    transform: scale(1);
+}
+
+.item-cards {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin: 2em 0 0 0; */
+    padding: 0.2em;
+    box-shadow: 5px 5px 15px silver;
+    /* border-right: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7; */
+    height: 50vh;
+    transition: transform 0.5s ease;
+    transform: scale(1);
+    
+}
+
+.item-cards:hover {
+    border: none;
+    transition: transform 0.5s ease;
+    transform: scale(1.1);
+}
+
+.add-cart-home-btn {
+    display: none;
+    transition: transform 0.5s ease;
+}
+
+.add-cart-home-btn:hover {
+    transition: transform 0.5s ease;
+}
+
+.item-cards:hover .add-cart-home-btn{
+    display: block;
+    width: 106%;
+    padding: 1em;
+    border: none;
+    background-color: maroon;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+}
+
+
+
+
+
+/* .add-cart-home-btn:hover {
+    
+} */
+
+.item-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+    margin: 1em 0 0 0;
+    color: #4e4e4e;
+}
+
+.item-title:active {
+    color: inherit;
+}
+  
+
+.item-price {
+    color: blue;
+    font-weight: bold;
+}
+
+.dots {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.item-cards:hover .dots {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+#dot-green {
+    
+    font-size: xx-large;
+    color: green;
+}
+
+#dot-red {
+    
+    font-size: xx-large;
+    color: red;
+}
+
+#dot-blue {
+    
+    font-size: xx-large;
+    color: rgb(35, 140, 182);
+}
+
+@media (max-width: 768px) {
+    .h-img {
+        width: 55%
+    }
+    .m-img {
+        width: 70%
+    }
+    .d-img {
+        width: 70%
+    }
+    .t-img {
+        width: 85%
+    }
+}
